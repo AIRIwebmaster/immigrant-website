@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Browse multi-page navigation",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "homepage",
+      "About route",
+      "What We Do route",
+      "Men Connect detail"
+    ],
+    "description": "Navigation opens distinct pages, not a one-page section.",
+    "steps": [
+      "Open the homepage",
+      "Click About",
+      "Click What We Do and then Men Connect"
+    ],
+    "expected": "Each navigation action shows its own dedicated page with relevant content."
+  },
+  {
+    "name": "Mobile navigation to support",
+    "viewport": "mobile",
+    "covers": [
+      "mobile menu",
+      "dedicated support page",
+      "urgent help"
+    ],
+    "description": "Support remains reachable on mobile.",
+    "steps": [
+      "Open menu",
+      "Tap Get Support",
+      "Read urgent-help guidance"
+    ],
+    "expected": "Support page shows 9-1-1, 9-8-8 and honest intake limitations."
+  },
+  {
+    "name": "Interactive inquiry demonstration",
+    "viewport": "desktop",
+    "covers": [
+      "contact form validation",
+      "safe preview demonstration",
+      "confirmation"
+    ],
+    "description": "The form visibly validates inputs without collecting live personal data.",
+    "steps": [
+      "Open Contact",
+      "Attempt empty submission",
+      "Fill sample name, email, inquiry type and message and check consent",
+      "Submit"
+    ],
+    "expected": "Required inputs block empty submission; completed demo shows form preview completed and notes no data was transmitted."
+  },
+  {
+    "name": "Event filters and no invented registration",
+    "viewport": "desktop",
+    "covers": [
+      "event filtering",
+      "no confirmed events state"
+    ],
+    "description": "Events provide distinct filters without fictitious booking.",
+    "steps": [
+      "Open Events",
+      "Select Family Strong"
+    ],
+    "expected": "The no confirmed Family Strong events state appears and no invented event date is displayed."
+  }
+]
