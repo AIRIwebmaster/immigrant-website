@@ -101,8 +101,8 @@ function App() {
             <button onClick={() => go('top')}>Home</button>
             <button onClick={() => go('story')}>About</button>
             <button onClick={() => go('pathways')}>What We Do</button>
-            <button onClick={() => go('sessions')}>Events</button>
-            <button onClick={() => go('resources')}>Resources</button>
+            
+            
             <button onClick={() => go('partner')}>Get Involved</button>
             <button className="mobile-support" onClick={() => go('support')}>
               Get Support
@@ -112,12 +112,7 @@ function App() {
             <button className="support-link" onClick={() => go('support')}>
               Get Support
             </button>
-            <button
-              className="btn btn-dark nav-cta"
-              onClick={() => go('sessions')}
-            >
-              Join the Next Session <ArrowUpRight size={17} />
-            </button>
+            
           </div>
           <button
             className="hamburger"
@@ -134,7 +129,7 @@ function App() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="eyebrow">
-                <span className="eyebrow-mark" /> A CANADIAN NETWORK FOR
+                A CANADIAN NETWORK FOR
                 IMMIGRANT MEN AND FAMILIES
               </span>
               <h1>
@@ -148,9 +143,7 @@ function App() {
                 is a place to start.
               </p>
               <div className="hero-buttons">
-                <button className="btn btn-dark" onClick={() => go('sessions')}>
-                  Join the Next Session <ArrowUpRight size={18} />
-                </button>
+                <button className="btn btn-dark" onClick={() => go("pathways")}>Explore Our Programs <ArrowUpRight size={18}/></button>
                 <button
                   className="btn btn-outline"
                   onClick={() => go('pathways')}
@@ -171,8 +164,8 @@ function App() {
             </div>
             <div className="hero-visual">
               <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400&q=90"
-                alt="Friends sharing time together outdoors"
+                src="https://unsplash.com/photos/a-group-of-people-smiling-t-Kzi9Wqdko/download?w=1400"
+                alt="Black family and friends smiling together"
               />
               <div className="image-ribbon">
                 <span className="pulse-dot" /> STRONGER TOGETHER, EVERY STEP OF
@@ -187,7 +180,7 @@ function App() {
         </section>
         <section className="reassurance">
           <div className="container reassurance-grid">
-            <span className="section-tag">01 / WHY WE EXIST</span>
+            
             <div>
               <h2>
                 You do not have to carry <span>everything alone.</span>
@@ -211,7 +204,7 @@ function App() {
           <div className="container">
             <div className="section-heading">
               <div>
-                <span className="section-tag">02 / OUR WORK</span>
+                
                 <h2>
                   Three pathways.
                   <br />
@@ -232,23 +225,13 @@ function App() {
                       alt={p.title + ' programme illustrative community image'}
                       loading="lazy"
                     />
-                    <span className="program-number">{p.num} / 03</span>
+                    
                   </div>
                   <div className="program-body">
-                    <span className="mini-label">{p.tag}</span>
+                    
                     <h3>{p.title}</h3>
                     <p>{p.summary}</p>
-                    <button
-                      className="circle-link"
-                      onClick={() => {
-                        setNotice(
-                          p.title +
-                            ' programme details are planned for the full website. The homepage preview shows the approved summary.'
-                        );
-                        window.setTimeout(() => setNotice(''), 6000);
-                      }}
-                      aria-label={'Explore ' + p.title}
-                    >
+                    <button className="circle-link" onClick={() => { window.location.hash = "/" + p.id; }} aria-label={"Explore " + p.title}>
                       <ArrowUpRight size={21} />
                     </button>
                   </div>
@@ -260,7 +243,7 @@ function App() {
         <section className="journey section">
           <div className="container">
             <div className="journey-head">
-              <span className="section-tag light">03 / HOW IT WORKS</span>
+              
               <h2>
                 Start where
                 <br />
@@ -304,49 +287,13 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="sessions section" id="sessions">
-          <div className="container session-grid">
-            <div>
-              <span className="section-tag">04 / UPCOMING CONVERSATIONS</span>
-              <h2>
-                Good things begin
-                <br />
-                with <em>a conversation.</em>
-              </h2>
-              <p>
-                Our sessions are practical, respectful and grounded in the
-                realities immigrant men and families experience. Come to listen,
-                share, learn or simply find community.
-              </p>
-              <button className="btn btn-dark" onClick={() => go('contact')}>
-                Ask about upcoming sessions <ArrowUpRight size={18} />
-              </button>
-            </div>
-            <div className="session-placeholder">
-              <div className="session-top">
-                <CalendarDays size={25} />
-                <span>EVENTS & CONVERSATIONS</span>
-              </div>
-              <h3>Upcoming sessions will be announced here.</h3>
-              <p>
-                Dates and registration are being confirmed. We won’t display
-                unverified events or accept registrations for sessions that have
-                not been scheduled.
-              </p>
-              <div className="session-divider" />
-              <span className="session-bottom">
-                MEN CONNECT · FAMILY STRONG · NAVIGATE CANADA{' '}
-                <ArrowUpRight size={17} />
-              </span>
-            </div>
-          </div>
-        </section>
+        
         <section className="story section" id="story">
           <div className="container story-grid">
             <div className="story-visual">
               <img
-                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1100&q=85"
-                alt="Family spending time together"
+                src="https://unsplash.com/photos/a-man-woman-and-child-are-posing-for-a-picture-CSkyEOU8yw4/download?w=1100"
+                alt="Black family spending time together"
                 loading="lazy"
               />
               <div className="story-label">
@@ -355,7 +302,7 @@ function App() {
               </div>
             </div>
             <div className="story-copy">
-              <span className="section-tag">05 / WHY IT MATTERS</span>
+              
               <h2>
                 Migration is
                 <br />
@@ -373,20 +320,14 @@ function App() {
                 whole family.
               </p>
               <div className="story-rule" />
-              <span className="section-tag">OUR STORY</span>
+              
               <h3>Built from lived experience.</h3>
               <p>
                 The network was created from the conviction that immigrant men
                 need places to speak honestly, build meaningful relationships
                 and seek support without shame.
               </p>
-              <button
-                className="text-button"
-                onClick={() =>
-                  setNotice(
-                    'The full founder biography will be published once the title and founding details are verified.'
-                  )
-                }
+              <button className="text-button" onClick={() => go("story")}
               >
                 Read our story <ArrowUpRight size={19} />
               </button>
@@ -396,7 +337,7 @@ function App() {
         <section className="resources section" id="resources">
           <div className="container resources-row">
             <div>
-              <span className="section-tag">06 / TRUSTED NAVIGATION</span>
+              
               <h2>
                 Find the right
                 <br />
@@ -411,11 +352,9 @@ function App() {
               <Compass size={38} strokeWidth={1.4} />
               <h3>Practical guidance. Human connection.</h3>
               <p>
-                Our resource directory is being prepared. For now, explore the
-                three pathways and learn how navigation support is intended to
-                work.
+                Explore the three pathways and learn how navigation support is intended to work.
               </p>
-              <button className="text-button" onClick={() => go('support')}>
+              <button className="text-button" onClick={() => go("pathways")}>
                 Explore support options <ArrowUpRight size={20} />
               </button>
             </div>
@@ -424,7 +363,7 @@ function App() {
         <section className="partnership section" id="partner">
           <div className="container partnership-inner">
             <div>
-              <span className="section-tag light">07 / GROW THE NETWORK</span>
+              
               <h2>
                 Stronger pathways
                 <br />
@@ -435,7 +374,7 @@ function App() {
                 institutions can help create stronger pathways for immigrant men
                 and their families.
               </p>
-              <button className="btn btn-white" onClick={() => go('contact')}>
+              <button className="btn btn-white" onClick={() => go("partner")}>
                 Explore a partnership <ArrowUpRight size={18} />
               </button>
             </div>
@@ -452,7 +391,7 @@ function App() {
         <section className="support section" id="support">
           <div className="container support-grid">
             <div>
-              <span className="section-tag">08 / GET SUPPORT</span>
+              
               <h2>
                 Tell us what
                 <br />
@@ -470,7 +409,7 @@ function App() {
               </p>
             </div>
             <div className="support-panel">
-              <h3>Looking for support?</h3>
+              
               <p>
                 The secure support request workflow is being prepared. Please do
                 not send sensitive records by email or through a general contact
@@ -496,7 +435,7 @@ function App() {
         <section className="faq section">
           <div className="container faq-grid">
             <div>
-              <span className="section-tag">09 / GOOD TO KNOW</span>
+              
               <h2>
                 A few things
                 <br />
@@ -524,16 +463,12 @@ function App() {
         </section>
         <section className="closing">
           <div className="container closing-inner">
-            <span className="section-tag light">
-              LET’S MOVE FORWARD, TOGETHER
-            </span>
+            
             <h2>
               A stronger future can begin with <em>one honest conversation.</em>
             </h2>
             <div className="closing-actions">
-              <button className="btn btn-white" onClick={() => go('sessions')}>
-                Explore upcoming sessions <ArrowUpRight size={18} />
-              </button>
+              <button className="btn btn-white" onClick={() => go("pathways")}>Explore Our Programs <ArrowUpRight size={18}/></button>
               <button className="btn btn-ghost" onClick={() => go('support')}>
                 Explore support <ArrowRight size={18} />
               </button>
@@ -559,25 +494,18 @@ function App() {
             <button onClick={() => go('top')}>Home</button>
             <button onClick={() => go('story')}>About</button>
             <button onClick={() => go('pathways')}>What We Do</button>
-            <button onClick={() => go('sessions')}>Events</button>
+            
           </div>
           <div className="footer-col">
             <h4>Get connected</h4>
             <button onClick={() => go('support')}>Get Support</button>
             <button onClick={() => go('partner')}>Get Involved</button>
-            <button onClick={() => go('resources')}>Resources</button>
+            
             <a href="https://988.ca/" target="_blank" rel="noreferrer">
               Crisis resources
             </a>
           </div>
-          <div className="footer-col">
-            <h4>Contact & policies</h4>
-            <p>
-              Verified contact details and approved privacy, terms and
-              accessibility policies will be published before launch.
-            </p>
-            <a href="#/contact">Contact</a><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="#/accessibility">Accessibility</a><a href="https://988.ca/" target="_blank" rel="noreferrer"><Mail size={16}/> Urgent help resources</a>
-          </div>
+          
         </div>
         <div className="container footer-bottom">
           <span>

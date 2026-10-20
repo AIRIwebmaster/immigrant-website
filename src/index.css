@@ -1116,6 +1116,7 @@ a:focus-visible {
     font-size: 9px;
   }
 }
+.eyebrow{font-size:clamp(13px,1.15vw,17px);line-height:1.5;letter-spacing:.07em}.section-tag,.mini-label,.program-number{display:none!important}.footer-top{grid-template-columns:2.2fr 1fr 1fr}.reassurance-grid{grid-template-columns:1fr;gap:0}.program-body h3{margin-top:0}@media(max-width:850px){.footer-top{grid-template-columns:1.5fr 1fr 1fr}}@media(max-width:560px){.footer-top{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
