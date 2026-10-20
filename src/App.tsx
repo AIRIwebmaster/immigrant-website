@@ -164,7 +164,8 @@ function App() {
             </div>
             <div className="hero-visual">
               <img
-                src="https://unsplash.com/photos/a-group-of-people-smiling-t-Kzi9Wqdko/download?w=1400"
+                src="/resources/home-connection.png"
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/resources/men-connect.png"; }}
                 alt="Black family and friends smiling together"
               />
               <div className="image-ribbon">
@@ -292,7 +293,8 @@ function App() {
           <div className="container story-grid">
             <div className="story-visual">
               <img
-                src="https://unsplash.com/photos/a-man-woman-and-child-are-posing-for-a-picture-CSkyEOU8yw4/download?w=1100"
+                src="/resources/home-belonging.png"
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/resources/family-strong.png"; }}
                 alt="Black family spending time together"
                 loading="lazy"
               />
