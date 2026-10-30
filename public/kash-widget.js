@@ -12,7 +12,7 @@
     .kash-head{background:#174c43;color:#fff;padding:17px 18px;display:flex;justify-content:space-between;align-items:center}
     .kash-head strong{display:block;font-size:17px}.kash-head small{display:block;color:#dcece7;margin-top:2px}
     .kash-close{background:transparent;border:0;color:#fff;font-size:25px;cursor:pointer;padding:0 3px}
-    .kash-body{padding:16px;overflow:auto;flex:1}.kash-welcome{margin:0 0 14px}.kash-topics{display:grid;gap:8px}
+    .kash-body{padding:16px;overflow:auto;flex:1;display:flex;flex-direction:column}.kash-welcome{margin:0 0 14px;flex-shrink:0}.kash-topics{display:grid;gap:8px;flex-shrink:0}.kash-topic[aria-pressed="true"]{background:#e4eee9;border-color:#174c43;box-shadow:inset 3px 0 #174c43}.kash-answer{flex:1;overflow:auto;min-height:90px}
     .kash-topic{width:100%;text-align:left;background:#f5f8f6;border:1px solid #dce5e1;border-radius:10px;padding:11px 12px;color:#174c43;font:600 14px system-ui;cursor:pointer}
     .kash-topic:hover{background:#eaf2ee}.kash-answer{margin-top:14px;background:#f7f8f6;border-left:3px solid #d7a74b;border-radius:0 10px 10px 0;padding:12px;white-space:normal}
     .kash-answer p{margin:0 0 9px}.kash-answer ul{margin:7px 0;padding-left:19px}.kash-answer li{margin:5px 0}.kash-answer a{color:#155b80;text-decoration:underline}
@@ -71,7 +71,7 @@
     const answer = panel.querySelector('#kash-answer');
     answer.innerHTML = answers[button.dataset.topic] || '<p>Please choose a topic above.</p>';
     answer.hidden = false;
-    answer.scrollIntoView({behavior:'smooth',block:'nearest'});
+    panel.querySelectorAll('[data-topic]').forEach(topicButton => topicButton.setAttribute('aria-pressed', String(topicButton === button)));
   }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && panel.classList.contains('kash-open')) close(); });
 })();
